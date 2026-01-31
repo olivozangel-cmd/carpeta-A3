@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Para Ti 💖</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti 💖</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- Pantalla de contraseña -->
-<div id="login">
-    <h2>🔐 Acceso especial</h2>
-    <input type="password" id="password" placeholder="Contraseña">
-    <button onclick="login()">Entrar 💗</button>
-</div>
+    <div id="login" class="card">
+        <div class="header-icon">💗 Acceso especial</div>
+        <div class="input-container">
+            <input type="password" id="password" placeholder="........">
+        </div>
+        <button class="btn-main" onclick="login()">Entrar</button>
+    </div>
 
-<!-- Contenido principal -->
-<div id="content" style="display:none;">
-    <h1>Feliz cumpleaños 💕</h1>
+    <div id="content" class="card" style="display:none;">
+        <h1 class="title">Feliz cumpleaños 💕</h1>
+        <p class="subtitle">Esto lo hice con cariño</p>
 
-    <div id="dog">🐶</div>
+        <div id="dog">🐶</div>
 
-    <button class="btn" onclick="showMessage('dulce')">Algo dulce 🍭</button>
-    <button class="btn" onclick="showMessage('bonito')">Algo bonito 🌸</button>
-    <button class="btn" onclick="showMessage('sincero')">Algo sincero 💌</button>
+        <div class="highlight-box">
+            Ojalá este año te trate bonito ✨
+        </div>
 
-    <!-- Icono rosa -->
-    <div id="rose" onclick="showMessage('rosa')">🌹</div>
+        <div class="button-group">
+            <button class="btn-action" onclick="showMessage('dulce')">Algo dulce</button>
+            <button class="btn-action" onclick="showMessage('bonito')">Algo bonito</button>
+            <button class="btn-action" onclick="showMessage('sincero')">Algo sincero</button>
+        </div>
 
-    <!-- Mensaje permanente -->
-    <div id="message"></div>
+        <div class="footer-info">
+            <div class="paws">🐾</div>
+            <p>Faltan 2 días para tu próximo cumpleaños 🎂</p>
+            <p class="signature">— Alguien que piensa en ti</p>
+        </div>
 
-    <audio id="music" loop>
-        <source src="https://cdn.pixabay.com/download/audio/2023/02/28/audio_4c88e23b4a.mp3" type="audio/mpeg">
-    </audio>
-</div>
+        <audio id="music" loop>
+            <source src="https://cdn.pixabay.com/download/audio/2023/02/28/audio_4c88e23b4a.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

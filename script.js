@@ -1,52 +1,41 @@
-const PASSWORD = "02022009";
-
-const messages = {
-    dulce: "Me gusta cuando sonríes y tus ojos no son la excepción 💖",
-    bonito: "Me gustaría verte hacer lo que más te apasiona en esta vida y estar en ello 🌷",
-    sincero: "Tienes una energía que no se la he visto a nadie, eso me gusta de ti 💫",
-    rosa: "Alguien especial te quiere seguir conociendo y saber más de tu maravilloso universo 🌹"
-};
+const PASSWORD = "tu_contraseña"; // Cambia esto por la que quieras
 
 function login() {
     const input = document.getElementById("password").value;
     if(input === PASSWORD){
         document.getElementById("login").style.display = "none";
         document.getElementById("content").style.display = "block";
+        playMusic();
     } else {
         alert("Contraseña incorrecta 😢");
     }
 }
 
-function showMessage(type){
-    // Mensaje permanente
-    document.getElementById("message").innerText = messages[type];
+const messages = {
+    dulce: "Me gusta cuando sonríes...",
+    bonito: "Me gustaría verte hacer lo que más te apasiona...",
+    sincero: "Tienes una energía única..."
+};
 
-    // Perrito feliz
-    const dog = document.getElementById("dog");
-    dog.classList.add("happy");
-    setTimeout(()=>dog.classList.remove("happy"), 500);
-
-    // Corazones
+function showMessage(type) {
+    alert(messages[type]); // O puedes mostrarlo en el cuadro blanco
     createHearts();
+}
 
-    // Música romántica
-    playMusic();
+function createHearts() {
+    for(let i=0; i<8; i++) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerText = "💗";
+        heart.style.left = Math.random() * 80 + 10 + "%";
+        heart.style.top = "60%";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 2000);
+    }
 }
 
 function playMusic(){
     const music = document.getElementById("music");
-    music.volume = 0.4;
-    if(music.paused) music.play().catch(()=>{});
-}
-
-function createHearts(){
-    for(let i=0;i<5;i++){
-        const heart = document.createElement("div");
-        heart.className = "heart";
-        heart.innerText = "💖";
-        heart.style.left = (Math.random() * window.innerWidth) + "px";
-        heart.style.top = (window.innerHeight - 50) + "px";
-        document.body.appendChild(heart);
-        setTimeout(()=>heart.remove(), 2000);
-    }
+    music.volume = 0.3;
+    music.play().catch(e => console.log("La música requiere interacción previa"));
 }

@@ -1,137 +1,131 @@
 * {
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     -webkit-tap-highlight-color: transparent;
 }
 
 body {
     margin: 0;
+    padding: 0;
     min-height: 100vh;
-    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    background-color: #fdf0f0; /* Color rosa muy pálido del fondo */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
 }
 
-/* Pantalla de contraseña */
-#login {
+/* Estilo de la Tarjeta Blanca */
+.card {
     width: 90%;
-    max-width: 350px;
-    background: #fff0f3;
-    padding: 30px 20px;
-    border-radius: 25px;
+    max-width: 340px;
+    background: #fffafa; 
+    padding: 40px 30px;
+    border-radius: 40px; /* Bordes muy redondeados como en la foto */
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
 }
 
-#login input {
-    width: 100%;
-    padding: 12px;
-    border-radius: 15px;
-    border: 1px solid #ccc;
-    margin: 12px 0;
-    text-align: center;
-    font-size: 16px;
-}
-
-#login button {
-    padding: 12px 25px;
-    border-radius: 20px;
-    border: none;
-    background: #e76a8d;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Contenido principal */
-#content {
-    width: 90%;
-    max-width: 360px;
-    background: #fff0f3;
-    padding: 25px 20px;
-    border-radius: 25px;
-    text-align: center;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-h1 {
-    margin: 0;
-    color: #e76a8d;
-    font-size: 24px;
-}
-
-/* Perrito */
-#dog {
-    font-size: 90px;
-    margin: 15px 0;
-    animation: idle 2s infinite ease-in-out;
-}
-
-@keyframes idle {
-    50% { transform: translateY(-6px); }
-}
-
-#dog.happy {
-    animation: happy 0.6s ease-in-out;
-}
-
-@keyframes happy {
-    30% { transform: scale(1.2) rotate(5deg); }
-    60% { transform: scale(1.2) rotate(-5deg); }
-}
-
-/* Botones */
-.btn {
-    width: 100%;
-    padding: 14px;
-    margin: 8px 0;
-    border-radius: 25px;
-    border: none;
-    background: #e76a8d;
-    color: white;
-    font-size: 15px;
-    cursor: pointer;
-    box-shadow: 0 6px 15px rgba(231,106,141,0.4);
-    transition: transform 0.15s, box-shadow 0.15s;
-}
-
-.btn:hover { transform: translateY(-2px); }
-.btn:active {
-    transform: scale(0.93);
-    box-shadow: 0 3px 8px rgba(231,106,141,0.4);
-}
-
-/* Rosa */
-#rose {
-    font-size: 45px;
-    margin-top: 15px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-#rose:active {
-    transform: scale(1.2);
-}
-
-/* Mensaje permanente */
-#message {
-    background: white;
-    padding: 15px;
-    border-radius: 18px;
+/* Estilos de Login */
+.header-icon {
+    font-size: 22px;
     font-weight: bold;
-    margin-top: 15px;
-    min-height: 70px;
+    margin-bottom: 25px;
+    color: #000;
 }
 
-/* Corazones flotando */
+.input-container {
+    border: 2px solid #000;
+    border-radius: 20px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+#password {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 24px;
+    outline: none;
+    letter-spacing: 5px;
+}
+
+.btn-main {
+    background-color: #e76a8d;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Pantalla de Cumpleaños */
+.title {
+    color: #e76a8d;
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 14px;
+    margin-top: 0;
+    font-style: italic;
+}
+
+#dog {
+    font-size: 80px;
+    margin: 20px 0;
+}
+
+.highlight-box {
+    background: white;
+    padding: 12px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-action {
+    background-color: #e76a8d;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(231,106,141,0.2);
+}
+
+/* Footer */
+.footer-info {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #666;
+}
+
+.paws { font-size: 20px; color: #e76a8d; margin-bottom: 5px; }
+.signature { font-style: italic; color: #999; margin-top: 10px; }
+
+/* Animación de corazones */
 .heart {
     position: absolute;
-    font-size: 18px;
-    animation: float 1.5s forwards;
-    pointer-events: none;
+    font-size: 20px;
+    animation: floatUp 2s ease-out forwards;
+    z-index: 100;
 }
 
-@keyframes float {
-    to { transform: translateY(-80px) scale(1.5); opacity: 0; }
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100px) scale(1.5); opacity: 0; }
 }
