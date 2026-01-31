@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para ti 💗</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- 🔐 Pantalla de contraseña -->
+<div class="password-screen" id="passwordScreen">
+    <h2>💗 Acceso especial</h2>
+    <input type="password" id="passwordInput" placeholder="Contraseña">
+    <button onclick="checkPassword()">Entrar</button>
+    <p id="error"></p>
+</div>
+
+<!-- 🎁 Contenido principal -->
+<div class="card hidden" id="mainContent">
+    <h1>Feliz cumpleaños 💕</h1>
+    <p class="subtitle">Esto lo hice con cariño</p>
+
+    <div class="dog" id="dog">🐶</div>
+
+    <div class="message-box" id="message">
+        Ojalá este año te trate bonito ✨
+    </div>
+
+    <button class="btn" onclick="showMessage('dulce')">Algo dulce</button>
+    <button class="btn" onclick="showMessage('bonito')">Algo bonito</button>
+    <button class="btn" onclick="showMessage('sincero')">Algo sincero</button>
+
+    <!-- 🐾 Botón secreto -->
+    <div class="secret" onclick="secretMessage()">🐾</div>
+
+    <!-- ⏳ Contador -->
+    <p class="countdown" id="countdown"></p>
+
+    <p class="footer">— Alguien que piensa en ti</p>
+</div>
+
+<!-- 🎵 Música tierna -->
+<audio id="music" loop>
+    <source src="https://cdn.pixabay.com/audio/2022/10/30/audio_8c7b7f1c1b.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
