@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Para Ti 💖</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Ti 💖</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Pantalla de contraseña -->
 <div id="login">
-  <h2>🔐 Ingresa la contraseña</h2>
-  <input type="password" id="password" placeholder="Contraseña">
-  <button onclick="login()">Entrar 💗</button>
+    <h2>🔐 Acceso especial</h2>
+    <input type="password" id="password" placeholder="Contraseña">
+    <button onclick="login()">Entrar 💗</button>
 </div>
 
+<!-- Contenido principal -->
 <div id="content" style="display:none;">
-  <div id="dog">🐶</div>
+    <h1>Feliz cumpleaños 💕</h1>
 
-  <button onclick="showMessage('dulce')">Algo dulce 🍭</button>
-  <button onclick="showMessage('bonito')">Algo bonito 🌸</button>
-  <button onclick="showMessage('sincero')">Algo sincero 💌</button>
+    <div id="dog">🐶</div>
 
-  <!-- ICONO ROSA -->
-  <div id="rose" onclick="showMessage('rosa')">🌹</div>
+    <button class="btn" onclick="showMessage('dulce')">Algo dulce 🍭</button>
+    <button class="btn" onclick="showMessage('bonito')">Algo bonito 🌸</button>
+    <button class="btn" onclick="showMessage('sincero')">Algo sincero 💌</button>
 
-  <!-- TEXTO PERMANENTE -->
-  <div id="message"></div>
+    <!-- Icono rosa -->
+    <div id="rose" onclick="showMessage('rosa')">🌹</div>
 
-  <!-- MÚSICA ROMÁNTICA -->
-  <audio id="music" loop>
-    <source src="https://cdn.pixabay.com/download/audio/2023/02/28/audio_4c88e23b4a.mp3" type="audio/mpeg">
-  </audio>
+    <!-- Mensaje permanente -->
+    <div id="message"></div>
+
+    <audio id="music" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2023/02/28/audio_4c88e23b4a.mp3" type="audio/mpeg">
+    </audio>
 </div>
 
 <script src="script.js"></script>
