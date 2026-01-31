@@ -61,31 +61,20 @@ button:active {
 }
 
 #message {
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 17px;
   color: #444;
-  min-height: 70px;
+  min-height: 80px;
 }
 
-#counter {
+/* ROSA */
+#rose {
+  font-size: 45px;
   margin-top: 15px;
-  font-weight: bold;
-  color: #ff6f91;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-.heart {
-  position: fixed;
-  font-size: 20px;
-  animation: float 2s linear forwards;
-}
-
-@keyframes float {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
+#rose:active {
+  transform: scale(1.2);
 }
